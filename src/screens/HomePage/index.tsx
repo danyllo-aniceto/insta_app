@@ -1,14 +1,33 @@
-import { Image } from 'react-native'
+import { Image, FlatList, ImageSourcePropType } from 'react-native'
 
 import { Background } from '../../components/Background'
-import { NavigationBar, Icons, Icon, LogoIG, DownArrow } from './styles'
+import {
+  NavigationBar,
+  Icons,
+  Icon,
+  LogoIG,
+  DownArrow,
+  ProfileIcon,
+  Main,
+  ImageIcon
+} from './styles'
 
 import heartLogo from '../../assets/heart.png'
 import addLogo from '../../assets/add.png'
 import messageLogo from '../../assets/message.png'
 import IGlogo from '../../assets/IGlogo.png'
 import downArrowImage from '../../assets/downArrow.png'
+import { DATA } from './mock'
+
+type ItemProps = { icon: any }
+
 export function HomePage() {
+  const Item = ({ icon }: ItemProps) => (
+    <ProfileIcon>
+      <ImageIcon source={icon} />
+    </ProfileIcon>
+  )
+
   return (
     <Background>
       <NavigationBar>
@@ -31,6 +50,15 @@ export function HomePage() {
           </Icon>
         </Icons>
       </NavigationBar>
+      <Main>
+        <FlatList
+          data={DATA}
+          renderItem={({ item }) => <Item icon={item.icon} />}
+          keyExtractor={item => item.id.toString()}
+          showsHorizontalScrollIndicator={false}
+          horizontal
+        />
+      </Main>
     </Background>
   )
 }

@@ -47,3 +47,25 @@ export const DownArrow = styled.View`
   height: 14.81px;
   margin-left: 2px;
 `
+export const ProfileIcon = styled.View`
+  width: 65.33px;
+  height: 65.37px;
+`
+export const ImageIcon = styled.Image`
+  width: 53.39px;
+  height: 66.64px;
+`
+
+export const Main = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: 390.64px;
+  height: 65.37px;
+  left: 20px;
+  top: 99px;
+`

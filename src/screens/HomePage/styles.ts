@@ -57,15 +57,6 @@ export const ImageIcon = styled.Image`
 `
 
 export const Main = styled.View`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 16px;
-
-  position: absolute;
-  width: 390.64px;
-  height: 65.37px;
-  left: 20px;
+  padding: 0px 16px;
   top: 99px;
 `

@@ -1,4 +1,4 @@
-import { Image, FlatList, ImageSourcePropType } from 'react-native'
+import { Image, FlatList, ImageSourcePropType, Text } from 'react-native'
 
 import { Background } from '../../components/Background'
 import {
@@ -18,16 +18,9 @@ import messageLogo from '../../assets/message.png'
 import IGlogo from '../../assets/IGlogo.png'
 import downArrowImage from '../../assets/downArrow.png'
 import { DATA } from './mock'
-
-type ItemProps = { icon: any }
+import { Item } from './components/Item'
 
 export function HomePage() {
-  const Item = ({ icon }: ItemProps) => (
-    <ProfileIcon>
-      <ImageIcon source={icon} />
-    </ProfileIcon>
-  )
-
   return (
     <Background>
       <NavigationBar>
